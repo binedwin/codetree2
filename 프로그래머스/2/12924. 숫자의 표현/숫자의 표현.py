@@ -1,18 +1,6 @@
-def solution(n):
-    answer = 0
-    start, end = 1, 1
-    total = 1
-
-    while start <= n:
-        if total == n:
-            answer += 1
-            total -= start
-            start += 1
-        elif total < n:
-            end += 1
-            total += end
-        else:
-            total -= start
-            start += 1
-
+def solution(num):
+    answer=0
+    for i in range(1,num+1,2):
+        if num%i==0:
+            answer+=1
     return answer
